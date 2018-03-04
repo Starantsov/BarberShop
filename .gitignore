@@ -1,0 +1,8 @@
+*.psd
+css/*.css
+.DS_Store
+Thumbs.db
+node_modules/
+.idea
+*.log
+*.ai
