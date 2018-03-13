@@ -1,3 +1,4 @@
+build
 *.psd
 .DS_Store
 css/*.css
