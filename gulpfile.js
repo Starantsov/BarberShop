@@ -41,7 +41,7 @@ gulp.task("less",function(){    //Создания таска
 
 gulp.task("server", ["less"] ,function(){
        server.init({
-               server: "./src/",
+               server: "src",
                injectChanges: true,            
                logConnections: true
                
