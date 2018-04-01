@@ -4,45 +4,48 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="format-detection" content="telephone=no">
-        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/style.min.css">
         <title>Барбершоп "Бородинский"</title>
     </head>
 
     <body>
        
         <header class="page-header">
-            <h1 class="visually-hidden">Барбершоп "Бородинский"</h1>          
+            <!-- <h1 class="visually-hidden">Барбершоп "Бородинский"</h1>           -->
+            
+            <div class="page-header__logo">
+                <img src="img/logotype-mobile.png" alt="Барбершоп Бородинский" width="290"  height="153">
+            </div>
 
             <nav class="main-nav main-nav--closed">
-                <button class="main-nav__toggle" type="button">Открыть меню</button>
+                <!-- <button class="main-nav__toggle" type="button">Открыть меню</button> -->
                 <div class="main-nav__wrapper">
-                    <ul class="main-nav__list">
-                        <li class="main-nav__item"><a href="#"></a></li>
-                        <li class="main-nav__item"><a href="#"></a></li>
-                        <li class="main-nav__item"><a href="#"></a></li>
-                        <li class="main-nav__item"><a href="#"></a></li>
-                        <li class="main-nav__item"><a href="#"></a></li>
+                    <ul class="main-nav__list ">
+                        <li class="main-nav__item"><a href="#">Главная</a></li>
+                        <li class="main-nav__item"><a href="#">Наши работы</a></li>
+                        <li class="main-nav__item"><a href="#">Записаться</a></li>
+                        <li class="main-nav__item"><a href="#">Контакты</a></li>
+                        <li class="main-nav__item"><a href="#">HTML Academy</a></li>
+                    </ul>
+                    
+                    <ul class="main-nav__user-list">
+                        <li class="main-nav__item"><a href="#" class="main-nav__login" title="Войти">Вход</a></li>
                     </ul>
                 </div>
             </nav>
-            <ul class="main-nav__user-list">
-                <li class="main-nav__item"><a href="#" class="main-nav__login" title="Войти">Войти</a></li>
-            </ul>
 
-            <div class="page-header__logo">
-                    <img src="img/logotype-tablet.svg" width="370" height="153" alt="Барбершоп Бородинский">
-            </div>
+    
         </header>
 
         <section class="stats">
             <header class="stats__header">
-                <h2 class="stats__titile  visually-hidden">Статистика Барбершопа</h2>
-                <b class="stats__slogan">Стрижка у нас<br> это выгодно!</b>
-                <p class="stats__intro">Мужская стрижка требует точноо подхода.Обратимся к статистике</p>
-                <small class="stats__legend  stats__legent-top"><sup>*</sup>Приведённые данные ложь</small>
+                <!-- <h2 class="stats__titile  visually-hidden">Статистика Барбершопа</h2> -->
+                <h2 class="stats__slogan">Стрижка у нас<br> это выгодно!</h2>
+                <p class="stats__intro">Мужская стрижка требует<br>точного подхода. Обратимся<br>к статистике</p>
+                <small class="stats__legend  stats__legent-top"><br><sup>* - </sup>приведённые данные ложь</small>
             </header>
 
-            <table class="stats__table">
+            <table class="stats__items">
                 <tr>
                     <td class="stats__value">1500<sub>*</sub></td>
                     <td class="stats__description">рублей<br>вложений</td>
@@ -57,25 +60,34 @@
                 </tr>
                 <tr>
                     <td class="stats__value">500 000<sub>*</sub></td>
-                    <td class="stats__description">лайков и коплиментов</td>
+                    <td class="stats__description">лайков<br>и коплиментов</td>
                 </tr>
             </table>
-            <small class="stats__legend  stats__legent-bottom"><sup>*</sup>Приведённые данные ложь</small>
+            <!-- <small class="stats__legend  stats__legent-bottom"><sup>*</sup>Приведённые данные ложь</small> -->
         </section>
 
         <section class="advantages">
             <div class="advantages__wrapper slider">
-                <h2 class="visually-hidden">Наши преимущества</h2>
-                <input type="radio" class="slider__input" name="advantages" id="advantages-input-1" checked>
-                <input type="radio" class="slider__input" name="advantages" id="advantages-input-2">
-                <input type="radio" class="slider__input" name="advantages" id="advantages-input-3">
-
-                <ul class="advantages__list">
+                <!-- <h2 class="visually-hidden">Наши преимущества</h2> -->
+               
+                <ul class="advantages__items">
                     <li class="advantages__item advantages__item--fast slider__item">
                         <h3 class="advantages__item-title">Быстро</h3>
                         <p>Мы делаем свою работу быстро! Два часа пролетят незаметно и вы — счастливый обладатель стильной стрижки-минутки</p>
                      </li>
+                     <li class="advantages__item advantages__item--fast slider__item">
+                        <h3 class="advantages__item-title">Круто</h3>
+                        <p>Забудьте, как стригли раньше. Мы сделаем из вас звезду футбола или кино. Во всяком случае внешне.</p>
+                     </li>
+                     <li class="advantages__item advantages__item--fast slider__item">
+                        <h3 class="advantages__item-title">Дорого</h3>
+                        <p>Наши мастера - профессионалы своего дела и не могут стоить дёшево. К тому же, разве не цена даёт определённый статус?</p>
+                     </li>
                 </ul>
+                <input type="radio" class="slider__input" name="advantages" id="advantages-input-1" checked>
+                <input type="radio" class="slider__input" name="advantages" id="advantages-input-2">
+                <input type="radio" class="slider__input" name="advantages" id="advantages-input-3">
+
             </div>
 
         </section>
@@ -83,7 +95,7 @@
         <section class="news">
             <div class="news__wrapper">
                 <h2 class="news__title">Новости и акции</h2>
-                <ul class="news__list">
+                <ul class="news__items">
                     <li class="news__item">
                         <time class="news__date" datetime="2015-09-28"><b>29</b>сент</time>
                         <p>Нам наконец завезли Ягермайстер! Теперь вы можете пропусить стаканчик во время стрижки.</p>
@@ -97,7 +109,7 @@
                         <p>Все дорожает, а наши стрижки нет! Как так? Приходите, постригитесь и узнаете, в чем здесь подвох!</p>
                     </li>
                 </ul>
-                <a href="#" class="btn  news__to-all">Показать всё</a>
+                <a href="#" class="btn  news__to-all">Показать все</a>
             </div>
         </section>
 
@@ -105,22 +117,26 @@
             <div class="reviews__wrapper slider">
                 <h2 class="reviews__title">Отзывы о нас</h2>
                 <a href="#" class="reviews__write btn"> Оставить свой</a>
-                <input type="radio" class="slider__input" name="reviews" id="reviews-input-1" checked>
-                <input type="radio" class="slider__input" name="reviews" id="reviews-input-2" checked>
-                <input type="radio" class="slider__input" name="reviews" id="reviews-input-3" checked>
+                <!-- <input type="radio" class="slider__input" name="reviews" id="reviews-input-1" checked> -->
+                <!-- <input type="radio" class="slider__input" name="reviews" id="reviews-input-2" > -->
+                <!-- <input type="radio" class="slider__input" name="reviews" id="reviews-input-3" > -->
 
                 <div class="reviews__list">
                     <blockquote class="reviews__item slider__item">
                         <div class="reviews__author-photo">
-                            <img src="img/pic-travis.jpg" width="50" height="33" alt="Фото Тревиса Баркера">
+                            <!-- <img src="img/rewiew-1.png" class="reviews__list-photo" alt="Фото Тревиса Баркера"> -->
+                            <div class="reviews__list-photo" ></div>
+
                         </div>
-                        <cite class="reviews__author-name">Трэвис Баркер</cite>
-                        <p>Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!</p>
+                        <div class="reviews__info">
+                            <cite class="reviews__author-name">Трэвис Баркер</cite>
+                            <p>Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!</p>
+                        </div>
                     </blockquote>
                     <!-- И так далее ...............-->
                     
-                    <button class="reviews__prev" type="button">Предыдущий отзыв</button>
-                    <button class="reviews__prev" type="button">Следующий отзыв</button>
+                    <!-- <button class="reviews__prev" type="button">Предыдущий отзыв</button> -->
+                    <!-- <button class="reviews__prev" type="button">Следующий отзыв</button> -->
                 </div>
                 <div class="reviews__toggles  slider__toggles"></div>
             </div>
@@ -128,29 +144,29 @@
         </section>
 
         <footer class="page-footer">
-            <div class="page-footer__wrapeer">
-                <p class="page-footer__contacts">
+            <div class="page-footer__wrapper">
+                <div class="page-footer__contacts">
                     <b>Барбершоп "Бородинский"</b><br>
-                    г. Санкт-Петербург, ул. Большая Конюшенная 19/8
+                    <p>г. Санкт-Петербург, ул. Большая Конюшенная 19/8</p>
                     <a href="tel:+78125556666">
-                        <span class="page-footer__contacts-hidden">Тел.:</span>
+                        <!-- <span class="page-footer__contacts-hidden">Тел.:</span> -->
                         +7 (812) 555-66-66
                     </a> 
-                </p>
+                </div>
                 <p class="page-footer__social">
                     <span class="social-links">
-                        <a href="#" class="social-link social-link--vk"></a>
-                        <a href="#" class="social-link social-link--fb"></a>
-                        <a href="#" class="social-link social-link--in"></a>
+                        <a href="#" class="social-link social-link--vk">1</a>
+                        <a href="#" class="social-link social-link--fb">2</a>
+                        <a href="#" class="social-link social-link--in">3</a>
                     </span>
                 </p>
                 <p class="page-footer__copyright">
-                    Разработано:
+                    Разработано:<br>
                     <a href="#" class="page-footer__copyright-link">HTML ACADEMY</a>
                 </p>
             </div>
         </footer>
 
-
+        <script src="js/script.js"></script>
     </body>
 </html>
