@@ -117,9 +117,7 @@
             <div class="reviews__wrapper slider">
                 <h2 class="reviews__title">Отзывы о нас</h2>
                 <a href="#" class="reviews__write btn"> Оставить свой</a>
-                <!-- <input type="radio" class="slider__input" name="reviews" id="reviews-input-1" checked> -->
-                <!-- <input type="radio" class="slider__input" name="reviews" id="reviews-input-2" > -->
-                <!-- <input type="radio" class="slider__input" name="reviews" id="reviews-input-3" > -->
+               
 
                 <div class="reviews__list">
                     <blockquote class="reviews__item slider__item">
@@ -134,7 +132,9 @@
                         </div>
                     </blockquote>
                     <!-- И так далее ...............-->
-                    
+                    <input type="radio" class="slider__input" name="reviews" id="reviews-input-1" checked>
+                    <input type="radio" class="slider__input" name="reviews" id="reviews-input-2" > 
+                    <input type="radio" class="slider__input" name="reviews" id="reviews-input-3" > 
                     <!-- <button class="reviews__prev" type="button">Предыдущий отзыв</button> -->
                     <!-- <button class="reviews__prev" type="button">Следующий отзыв</button> -->
                 </div>
@@ -146,22 +146,24 @@
         <footer class="page-footer">
             <div class="page-footer__wrapper">
                 <div class="page-footer__contacts">
-                    <b>Барбершоп "Бородинский"</b><br>
+                    <p>Барбершоп Бородинский</p>
                     <p>г. Санкт-Петербург, ул. Большая Конюшенная 19/8</p>
-                    <a href="tel:+78125556666">
+                    <a href="tel:+78125556666" class="btn page-footer__phone-button">
                         <!-- <span class="page-footer__contacts-hidden">Тел.:</span> -->
                         +7 (812) 555-66-66
                     </a> 
                 </div>
+                
                 <p class="page-footer__social">
+                        <p class="page-footer__friendship">Давайте дружить!</p>
                     <span class="social-links">
-                        <a href="#" class="social-link social-link--vk">1</a>
-                        <a href="#" class="social-link social-link--fb">2</a>
-                        <a href="#" class="social-link social-link--in">3</a>
+                        <div class="social-link"><a href="https://vk.com/tarantoshka" class="social-link--vk"></a></div>
+                        <div class="social-link"><a href="#" class="social-link--fb"></a></div>
+                        <div class="social-link"><a href="https://www.instagram.com/nazarstarantsov/" class="social-link--in"></a></div>
                     </span>
                 </p>
                 <p class="page-footer__copyright">
-                    Разработано:<br>
+                   <span> Разработано:</span><br><br>
                     <a href="#" class="page-footer__copyright-link">HTML ACADEMY</a>
                 </p>
             </div>

@@ -4,8 +4,8 @@
     letter-spacing: -.5px;
     background-color: @bg-lightgrey;
     color:black;
-    border-top:1px solid fade(grey,40%);
-    border-bottom:1px solid fade(grey,40%);
+    border-top:1px solid fade(grey,20%);
+    border-bottom:1px solid fade(grey,20%);
     
 
     padding-bottom: 70px; //Для стрелки
@@ -25,7 +25,7 @@
 .reviews__author-photo{
     width: 100%;
     margin-top:8px;
-    background: url("../../img/rewiew-1.png") no-repeat;
+    background: url("../../img/review-1.png") no-repeat;
 }
 .reviews__info{
     margin-left:20px;   
@@ -47,8 +47,8 @@
         padding-top:30px;
     }
     .reviews__author-photo{
-        background: url("../../img/rewiew-1-tablet.png") no-repeat;
-        width: 152px;
+        background: url("../../img/review-1-tablet.png") no-repeat;
+        width: 162px;
         height: 80px;
     }
     .reviews__title{
@@ -63,5 +63,28 @@
         position: absolute;
             top:10px;
             right: 20px;
+    }
+    .reviews__item{
+        padding: 34px 25px;
+        border:1px solid fade(grey,20%);
+    }
+}
+
+@media @desktop-widths{
+    .reviews__author-photo{
+        background:url("../../img/review-1-desktop.png") no-repeat;
+        background-position: center;
+        width: 330px;
+        height: 160px;
+
+        margin-top:0px;
+    }   
+    .reviews__info{
+        padding-top:36px;
+        margin-left:72px;
+    }
+    .reviews__item{ 
+        padding: 0;
+        border:1px solid fade(grey,20%);
     }
 }
