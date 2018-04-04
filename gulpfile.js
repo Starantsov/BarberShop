@@ -78,7 +78,11 @@ gulp.task("build",["clean"],function(){
         var build_js =                
           gulp.src("src/js/**/*.js")
           .pipe(gulp.dest("build/js"))
-
+        
+        var build_fonts = 
+          gulp.src("src/fonts/*")
+          .pipe(gulp.dest("build/fonts"))
+          
         .pipe(server.reload({stream: true}));
 
 });

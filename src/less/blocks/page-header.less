@@ -1,10 +1,7 @@
- .page-header{
-     min-height: 395px;
- } 
  .page-header__logo{
-     height:85px;
-     text-align: center;
-     padding-top:20px;
+     height:80px;
+     text-align: center; 
+     padding-top:30px;
 
  }
 
@@ -12,21 +9,31 @@
  
      .page-header{
          position: relative;
-         min-height: 70px;
          padding-bottom: 400px;
+         background-color: black;
      }
  
     .page-header__logo{
         position: absolute;
             bottom:0;
-        background: url("../../img/back-tablet.jpg");
-            background-position: center;
+        background-image: url("../../img/back-tablet.jpg");
+            background-position: center -9px;
             background-repeat: no-repeat;
             background-size: cover;
             
         width:100%;
         height: 400px;
     }   
+    .page-header__logo img{
+        position: absolute;
+        bottom: 257px;
+        left:50%;
+
+        width: 370px;
+        height: auto;
+        
+        transform: translateX(-50%);
+    }
 
  }
 
@@ -37,12 +44,17 @@
      }
      .page-header__logo{
         background: url("../../img/back-desktop.jpg");
-        background-position: center;
+        background-position: center 0px;
         background-repeat: no-repeat;
         background-size: cover;
 
          height: 648px;
      }
+
+     .page-header__logo img{
+         bottom: 438px;
+     }
+     
 
  }
 
