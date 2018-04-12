@@ -1,11 +1,7 @@
-
-
 .main-nav{
-    width:320px;
-    margin:0 auto;
+    width:auto;
     background-color: @header-main-nav;    
     position: relative;
-
     min-height: 50px;
 }
 .main-nav__wrapper{
@@ -160,7 +156,7 @@
              display: block;
          }
      }
-
+ 
      .main-nav--closed .main-nav__item--active a{
          padding-right: 70px;
          padding-left:70px;
@@ -174,14 +170,14 @@
 
      .main-nav--opened .main-nav__wrapper{
          position: absolute;
-
+        z-index: 1;
          top:0;
          left:70px;
          right: 0; 
 
-         height: 80vh;
+         height: 83vh;
          background-color: #6a4d38;
-         width:250px;
+         width:100%;
      }
 
      .main-nav--opened .main-nav__wrapper::before{
@@ -232,27 +228,30 @@
     .main-nav__toggle{
         display: none;
     }
+    .main-nav__wrapper{
+        .container-fluid();
+        display: flex;
+        justify-content: space-between;
+    }
     .main-nav__wrapper a{
         font-size:16px;
     }
   
-    .main-nav__list,
-    .main-nav__user-list{
+    .main-nav__list{
         display: flex;
-        flex-direction: row;
-        justify-content: space-around;
+        flex-grow:1;
+        flex-flow: row wrap;
+        
+        justify-content: space-between;
     } 
     .main-nav__item a{   
-        padding:0;
-        padding-top:25px;
-        padding-bottom: 23px;
-
+        padding:25px 0 23px 0;
         background: none;
         border: none;
      }
+
      .main-nav__item{
-         float: left;
-         margin-right: 7px;
+         margin-right: 12px;
 
          &:last-child{
              margin-right: 0;
@@ -284,17 +283,7 @@
              opacity: .3;
          }
      }
-    
 
-    .main-nav__list{
-        float:left;        
-        width:570px;
-    }
-    .main-nav__user-list{
-        float:right;
-        width:60px;
-    }
-    
     .main-nav__login{
         width:60px;
         height: 70px;
@@ -321,19 +310,19 @@
 
 
 @media @desktop-widths{
-    .main-nav__list{
-        width:780px;
-    }
+
     .main-nav__wrapper a{
         font-size:initial;
     }
     
     .main-nav__item a{
-        padding-right: 25px;
-        padding-left: 25px;
+        padding-right: 29px;
+        padding-left: 29px;
         
     }
-
+    .main-nav__item{
+        margin-right: 12px;
+    }
     .main-nav__item--active::after{
         content: "";
         bottom: 1px;
@@ -349,6 +338,7 @@
             opacity: 1;
         }
     }
+
     .main-nav__user-list{
         width:auto;
         max-width: 160px;

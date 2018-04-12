@@ -21,6 +21,19 @@
     }
 }
  
+.container-fluid(){
+    width: auto;
+
+    @media @tablet-widths{
+        width:84%; //640px / 768px = .84 = 84%
+        max-width: 960px;//Но на десктопе ширина контейнера
+                        //занимает 80%, чтобы не преопределять ничего
+                        //мы зададим максимальную ширину в 960%
+        margin:0 auto;
+    }
+    
+}
+
 .no-outline(){
     outline: none;
     background: transparent;
@@ -28,7 +41,14 @@
     &::before{
         display: none; 
     }
-}  
+} 
+.LoadPictureForAdvantages (@top;@left; @file_path){
+    content:url(@file_path);
+    width: 100%;
+    position: absolute;
+    top:@top;
+    left:@left;      
+}
 
 .block-title(){
     margin:0;

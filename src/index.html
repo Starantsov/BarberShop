@@ -40,30 +40,30 @@
         <section class="stats">
             <header class="stats__header">
                 <h2 class="stats__titile  visually-hidden">Статистика Барбершопа</h2>
-                <h2 class="stats__slogan">Стрижка у нас<br> это выгодно!</h2>
-                <p class="stats__intro">Мужская стрижка требует<br>точного подхода. Обратимся<br>к статистике</p>
-                <small class="stats__legend  stats__legent-top"><br><sup>* - </sup>приведённые данные ложь</small>
+                <h2 class="stats__slogan">Стрижка у нас это выгодно!</h2>
+                <p class="stats__intro">Мужская стрижка требует точного подхода. Обратимся к статистике:</p>
+                <small class="stats__legend  stats__legend--top"><sup>* - </sup> приведённые данные ложь</small>
             </header>
 
             <table class="stats__items">
                 <tr>
-                    <td class="stats__value">1500<sub>*</sub></td>
-                    <td class="stats__description">рублей<br>вложений</td>
+                    <td class="stats__value">1500<sup>*</sup></td>
+                    <td class="stats__description">рублей<br> вложений</td>
                 </tr>
                 <tr>
                     <td class="stats__value">7200</td>
-                    <td class="stats__description">секунд<br>времени мастера</td>
+                    <td class="stats__description">секунд<br> времени мастера</td>
                 </tr>
                 <tr>
                     <td class="stats__value">90 000</td>
-                    <td class="stats__description">постриженных<br>волос</td>
+                    <td class="stats__description">постриженных<br> волос</td>
                 </tr>
                 <tr>
-                    <td class="stats__value">500 000<sub>*</sub></td>
-                    <td class="stats__description">лайков<br>и коплиментов</td>
-                </tr>
+                    <td class="stats__value">500 000<sup>*</sup></td>
+                    <td class="stats__description">лайков<br> и коплиментов</td>
+                </tr>               
             </table>
-            <!-- <small class="stats__legend  stats__legent-bottom"><sup>*</sup>Приведённые данные ложь</small> -->
+            <small class="stats__legend  stats__legend--bottom"><sup>* - </sup> приведённые данные ложь</small>
         </section>
 
         <section class="advantages">
@@ -73,7 +73,7 @@
                 <ul class="advantages__items">
                     <li class="advantages__item advantages__item--fast slider__item">
                         <h3 class="advantages__item-title">Быстро</h3>
-                        <p>Мы делаем свою работу быстро! Два часа пролетят незаметно и вы — счастливый обладатель стильной стрижки-минутки</p>
+                        <p>Мы делаем свою работу быстро! Два часа пролетят незаметно и Вы — счастливый обладатель стильной стрижки-минутки</p>
                      </li>
                      <li class="advantages__item advantages__item--fast slider__item">
                         <h3 class="advantages__item-title">Круто</h3>
@@ -92,21 +92,27 @@
 
         </section>
 
-        <section class="news">
+        <section class="news" >
+                
             <div class="news__wrapper">
+                <div class="news__arrow"></div>                
                 <h2 class="news__title">Новости и акции</h2>
-                <ul class="news__items">
+                <ul class="news__items news__items--closed news__items--nojs">
                     <li class="news__item">
-                        <time class="news__date" datetime="2015-09-28"><b>29</b>сент</time>
+                        <time class="news__date" datetime="2015-09-28"><div><b>29</b>сент</div></time>
                         <p>Нам наконец завезли Ягермайстер! Теперь вы можете пропусить стаканчик во время стрижки.</p>
                     </li>
                     <li class="news__item">
-                        <time class="news__date" datetime="2015-09-19"><b>19</b>сент</time>
+                        <time class="news__date" datetime="2015-09-19"><div><b>19</b>сент</div></time>
                         <p>В нашей команде пополнение, Борис «Бритва» Стригунец, пополнил наши стройные ряды. Спешите записаться!</p>
                     </li>
                     <li class="news__item">
-                        <time class="news__date" datetime="2015-09-09"><b>9</b>сент</time>
+                        <time class="news__date" datetime="2015-09-09"><div><b>9</b>сент</div></time>
                         <p>Все дорожает, а наши стрижки нет! Как так? Приходите, постригитесь и узнаете, в чем здесь подвох!</p>
+                    </li>
+                    <li class="news__item">
+                        <time class="news__date" datetime="2015-08-24"><div><b>24</b>авг</div></time>
+                        <p>Ура!!! Мы открылись, бесплатная стрижка каждому пришедшему!</p>
                     </li>
                 </ul>
                 <a href="#" class="btn  news__to-all">Показать все</a>
@@ -145,15 +151,16 @@
 
         <footer class="page-footer">
             <div class="page-footer__wrapper">
+                <div class="page-footer__arrow"></div>
                 <div class="page-footer__contacts">
                     <p>Барбершоп Бородинский</p>
                     <p>г. Санкт-Петербург, ул. Большая Конюшенная 19/8</p>
                     <a href="tel:+78125556666" class="btn page-footer__phone-button">
-                        <!-- <span class="page-footer__contacts-hidden">Тел.:</span> -->
-                        +7 (812) 555-66-66
-                    </a> 
+                            <!-- <span class="page-footer__contacts-hidden">Тел.:</span> -->
+                            +7 (812) 555-66-66
+                        </a> 
                 </div>
-                
+               
                 <p class="page-footer__social">
                         <p class="page-footer__friendship">Давайте дружить!</p>
                     <span class="social-links">

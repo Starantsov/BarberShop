@@ -1,19 +1,21 @@
 .news__wrapper{
-    .container();
+    .container-fluid();
 
     min-height: 440px;
-    padding-top:67px;
     padding-bottom: 28px;
 
-    letter-spacing: -.5px;
     background-color: @bg-lightgrey;
     color:black;
-
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
-
+.news{
+    font-size:15px;
+}
 .news__title{
     .block-title();
+    margin-top: 20px;
 }
 .news__items{
     margin:0;
@@ -22,28 +24,111 @@
 
     list-style:none;
 }
-
+.news__arrow{
+    // position: absolute;
+    // top: 355px;
+    // left:6px;
+    // z-index: 3;
+    border:49vw solid transparent;
+    border-top:100px solid @bg-darkgrey;
+    border-bottom: 0;
+}
 .news__item{
-    min-height: 110px;
     margin:0 20px;
     margin-bottom: 16px;
-    padding-bottom: 18px;
-    padding-left:70px
+    padding-bottom: 38px;
+    padding-left:70px;
+    position: relative;
+    border-bottom: 1px rgba(0, 0, 0, .1) solid;
+
 }
-.news__item:nth-child(n+3){
+
+.news__date div{
+    & b{
+     display: block;
+     font-size:32px;
+    }
+    display: inline-block;
+    color: #fff;
+    font-size:15px;
+    line-height:22px; 
+    background-color: #000;
+    padding:7px 12px 2px 12px;
+    position: absolute;
+    left:0;
+    top:7px;
+    z-index: 1;
+    border-radius: 4px;
+    text-align: center;
+    &::before{
+        content:"";
+        position: absolute;
+        z-index: -1;
+        top:51px;
+        left:0px;
+        border:27px solid transparent;
+          border-bottom-color: #000;
+          transform: rotate(180deg);
+          
+    }
+}
+.news__items--closed .news__item:nth-child(n+3){
     display: none;
 }
-.news__item:nth-child(2){
-    min-height: 165px;
+.news__items--opened .news__item:nth-child(n+3){
+    display: block;
 }
-.news__to-all{
- margin-left: 45px;
- padding: 10px 60px;
-   
+.news__items--nojs .news__item:nth-child(n+3){
+    display: block;
+}
+.news__item:nth-child(2){
+    border-bottom: none;
+}
+.news__items--opened .news__item:nth-child(2){
+    border-bottom: 1px rgba(0, 0, 0, .1) solid;
+}
+.news__item:last-of-type{
+    border-bottom:none;
+}
+.news__items--closed + .news__to-all{
+    align-self: center;
+    padding:10px 80px;
+}
+.news__items--opened + .news__to-all{
+    align-self: center;
+    padding:10px 80px; 
 }
 
 @media @tablet-widths{
-    
+    .news__items--opened .news__item:nth-child(n+2){
+        display: inline-block;
+        margin-right: 0;
+    }
+    .news__items--nojs .news__item:nth-child(n+2){
+        display: inline-block;
+        margin-right: 0;
+    }
+    .news__items{
+    margin-left:10px;
+    margin-bottom: 15px;
+
+    display:flex;
+    flex-flow:row wrap;
+    justify-content: space-around;
+    }
+
+    .news__item{
+        display: inline-block;
+        flex-basis:30%;
+        margin:0;
+        padding: 0 30px;
+        padding-left:70px;
+        padding-right: 10px;
+        vertical-align: top;
+        border:none;
+        margin-bottom: 30px;
+    }
+
     .news__wrapper{
         min-height:270px;
         padding:0;
@@ -52,11 +137,15 @@
     }
     .news__to-all{
         position: absolute;
-            top:30px;
+            top:160px;
             right: 20px;
 
         padding:10px 13px;
 
+    }
+    .news__arrow{
+        margin-left: -75px;
+    margin-top:-20px;
     }
     .news__title{
         min-height:40px;
@@ -64,19 +153,13 @@
         text-align: left;
         margin-left:50px;
         font-size:35px;
-
+        margin-top: 50px;
 
     }
 
-    .news__item{
-        display: inline-block;
-        width:216px;
-        margin:0;
-        padding: 0 30px;
-        padding-left:70px;
-
-        vertical-align: top;
-
+    
+    .news__items--opened .news__item:nth-child(2){
+        border:none;
     }
 }
 
@@ -87,4 +170,14 @@
     .news__wrapper{
         padding-top:90px;
     }
+    .news__items--closed .news__item:nth-child(3){
+        display: inline-block;
+    }
+    .news__items--opened .news__item:nth-child(n+3){
+        display: inline-block;
+    }
+    .news__arrow{
+    display: none; 
+    }
+   
 }

@@ -1,24 +1,53 @@
+.advantages{
+    position: relative;
+}
 .advantages__wrapper{
-    .container();
+    .container-fluid();
     min-height:320px;
-    padding: top 30px;
+    padding-top:30px;
+
+  
 } 
+
+.slider__input{
+    position: relative;
+    z-index: 4;
+ 
+}
+
 .advantages__items{
     margin: 0;
     padding: 0;
     list-style: none;
+    position: relative;
 }
 .advantages__item{
     min-height:145px;
     margin-bottom: 23px;
     padding: 0 44px;
-    padding-top:125px;  
+    padding-top:105px;  
+    text-align: center;
+    font-size:15px;
+   
+    &::before{
+        .LoadPictureForAdvantages(0%,50%,"../../img/advantage-1-illustration.png",); 
+        transform: translateX(-50%);  
+    }
+    & h3{
+        text-transform: uppercase;
+        font-size:25px;
+        line-height: 20px;
+        letter-spacing: 0px;
+    }
 }
 .advantages__item:not(:first-of-type){
     display: none;
 }
 
 @media @tablet-widths{
+    .advantages .slider__input{
+        display: none;
+    }
     .advantages__wrapper{
         padding-top:42px;
     }
@@ -28,18 +57,39 @@
     .advantages__item{
         min-height: 95px;
         margin:0 30px;
-        margin-bottom: 40px;
+        &:not(:last-of-type){margin-bottom: 40px;}
+        
         padding: 0;
         padding-bottom: 39px;
         padding-left:128px;
+        text-align: left;
+
+        &::before{ 
+      
+            left:53%;
+        }
     }
     .advantages__item:not(:first-of-type){
         display: block;
     }
+    
+    .advantages__item:nth-child(2)::before{
+       .LoadPictureForAdvantages(33%, 53%, "../../img/advantage-2-illustration.png");
+       transform: translateX(-50%); 
+    }
+    .advantages__item:nth-child(3)::before{
+        .LoadPictureForAdvantages(66%,53%,"../../img/advantage-3-illustration.png"); 
+        transform: translateX(-50%); 
+    }
+
+
 
 }
 
 @media @desktop-widths{
+    .advantages{
+        margin: 50px 0;
+    }
     .advantages__items{ 
         display: table;
         width:100%;
@@ -47,21 +97,31 @@
     }
 
     .advantages__item{
-        display: table-cell;
-  
+        display: table-cell;  
         width:240px;
         margin: 0;
         padding: 0 40px;
         padding-top:130px;
+
+        text-align: center;
     }
     .advantages__item:not(:first-of-type){
         display: table-cell;
-    }
-
-    .advantages__item:not(:first-of-type){
         width: 200px;
         padding-left:60px;
         padding-right: 60px;
     }
+    .advantages__item:nth-child(1)::before{
+        .LoadPictureForAdvantages(0%,-32.5%,"../../img/advantage-1-illustration.png");
+        transform: translateX(0%); 
+     }
+    .advantages__item:nth-child(2)::before{
+        .LoadPictureForAdvantages(0%,0%,"../../img/advantage-2-illustration.png");
+        transform: translateX(0%); 
+     }
+     .advantages__item:nth-child(3)::before{
+         .LoadPictureForAdvantages(0%,33%,"../../img/advantage-3-illustration.png"); 
+         transform: translateX(0%); 
+     }
     
 }

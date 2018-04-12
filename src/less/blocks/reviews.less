@@ -1,18 +1,18 @@
 .reviews{
-    .container();
+    .container-fluid();
     
-    letter-spacing: -.5px;
     background-color: @bg-lightgrey;
     color:black;
     border-top:1px solid fade(grey,20%);
     border-bottom:1px solid fade(grey,20%);
-    
+    font-size:15px;
 
     padding-bottom: 70px; //Для стрелки
 }
 .reviews__title{
     .block-title();
 }
+
 .reviews__wrapper{
     position: relative;
 }
@@ -23,7 +23,7 @@
     display: flex;
 }
 .reviews__author-photo{
-    width: 100%;
+    width: 90px;
     margin-top:8px;
     background: url("../../img/review-1.png") no-repeat;
 }
@@ -51,6 +51,7 @@
         width: 162px;
         height: 80px;
     }
+    
     .reviews__title{
         text-align: left;
         margin-left:50px;
@@ -68,6 +69,8 @@
         padding: 34px 25px;
         border:1px solid fade(grey,20%);
     }
+
+   
 }
 
 @media @desktop-widths{
@@ -78,7 +81,7 @@
         height: 160px;
 
         margin-top:0px;
-    }   
+    } 
     .reviews__info{
         padding-top:36px;
         margin-left:72px;
@@ -87,4 +90,5 @@
         padding: 0;
         border:1px solid fade(grey,20%);
     }
+    
 }

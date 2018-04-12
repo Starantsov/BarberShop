@@ -4,18 +4,18 @@
      padding-top:30px;
 
  }
-
+ 
  @media @tablet-widths {
  
      .page-header{
+         display:flex;
+         flex-direction: column;
          position: relative;
-         padding-bottom: 400px;
          background-color: black;
      }
  
     .page-header__logo{
-        position: absolute;
-            bottom:0;
+        order:2;
         background-image: url("../../img/back-tablet.jpg");
             background-position: center -9px;
             background-repeat: no-repeat;
@@ -38,23 +38,18 @@
  }
 
  @media @desktop-widths{
-    
-     .page-header{
-         padding-bottom:648px;
-     }
+
      .page-header__logo{
         background: url("../../img/back-desktop.jpg");
         background-position: center 0px;
         background-repeat: no-repeat;
         background-size: cover;
-
          height: 648px;
      }
 
      .page-header__logo img{
          bottom: 438px;
-     }
-     
+     }     
 
  }
 
