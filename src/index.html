@@ -11,10 +11,14 @@
     <body>
        
         <header class="page-header">
-            <h1 class="visually-hidden">Барбершоп "Бородинский"</h1>          
-            
+            <h1 class="visually-hidden">Барбершоп "Бородинский"</h1> 
             <div class="page-header__logo">
-                <img src="img/logotype-mobile.png" alt="Барбершоп Бородинский" width="300"  height="153">
+                <picture>
+                        <source media="(min-width: 1200px)" srcset="img/logotype-desktop.png">
+                        <source media="(min-width: 768px)" srcset="img/logotype-tablet.png">                        
+                        <img src="img/logotype-mobile.png" alt="Барбершоп Бородинский" width="300"  height="153">
+                </picture>
+                
             </div>
 
             <nav class="main-nav main-nav--closed main-nav--nojs">
@@ -95,7 +99,6 @@
         <section class="news" >
                 
             <div class="news__wrapper">
-                <div class="news__arrow"></div>                
                 <h2 class="news__title">Новости и акции</h2>
                 <ul class="news__items news__items--closed news__items--nojs">
                     <li class="news__item">
@@ -151,7 +154,6 @@
 
         <footer class="page-footer">
             <div class="page-footer__wrapper">
-                <div class="page-footer__arrow"></div>
                 <div class="page-footer__contacts">
                     <p>Барбершоп Бородинский</p>
                     <p>г. Санкт-Петербург, ул. Большая Конюшенная 19/8</p>
