@@ -77,7 +77,7 @@ gulp.task("build", ["less"], function(){
 });
 
 gulp.task("images",function(){
-  return gulp.src("build/img/**/*.{png,jpg,gif}")
+  return gulp.src("src/**/*.{png,jpg,gif}")
           .pipe(imagemin([
             imagemin.optipng({optimizationLevel:3}),
             imagemin.jpegtran({progressive: true}) // Прогрессивная закрузка ( не с вверху в низ =))  

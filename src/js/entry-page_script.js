@@ -10,6 +10,6 @@ navToggle.addEventListener("click", function(){
         navMain.classList.add("main-nav--opened");
     }else{
         navMain.classList.remove("main-nav--opened");
-        navMain.classList.add("main-nav--closed");
+        navMain.classList.add("main-nav--closed"); 
     }
 })
