@@ -14,16 +14,19 @@
             <h1 class="visually-hidden">Барбершоп "Бородинский"</h1>          
             
             <div class="page-header__logo">
-                <img src="img/logotype-mobile.png" alt="Барбершоп Бородинский" width="300"  height="153">
+                    <picture>
+                            <source media="(min-width: 1200px)" srcset="img/logotype-desktop.png">
+                            <source media="(min-width: 768px)" srcset="img/logotype-tablet.png">                        
+                            <img src="img/logotype-mobile.png" alt="Барбершоп Бородинский" width="300"  height="153">
+                    </picture>  
             </div>
-
             <nav class="main-nav main-nav--closed main-nav--nojs">
                 <button class="main-nav__toggle" type="button">Открыть меню</button>
                 <div class="main-nav__wrapper">
                     <ul class="main-nav__list">
                         <li class="main-nav__item"><a href="#">Главная</a></li>
-                        <li class="main-nav__item"><a href="#">Наши работы</a></li>
-                        <li class="main-nav__item main-nav__item--active"><a>Записаться</a></li>
+                        <li class="main-nav__item main-nav__item--active"><a>работы</a></li>
+                        <li class="main-nav__item"><a href="#">Записаться</a></li>
                         <li class="main-nav__item"><a href="#">Контакты</a></li>
                         <li class="main-nav__item"><a href="#">HTML Academy</a></li>
                     </ul>
@@ -32,12 +35,12 @@
                         <li class="main-nav__user-item"><a href="#" class="main-nav__login" title="Войти">Вход</a></li>
                     </ul>
                 </div>
-            </nav>
-
-    
+            </nav>    
         </header>
-
-  
+        
+        <main>
+           
+        </main>
 
         <footer class="page-footer">
             <div class="page-footer__wrapper">
@@ -63,8 +66,9 @@
                     <a href="#" class="page-footer__copyright-link">HTML ACADEMY</a>
                 </p>
             </div>
-        </footer>
+        </footer>        
 
         <script src="js/entry-page_script.js"></script>
+
     </body>
 </html>
