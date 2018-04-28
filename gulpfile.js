@@ -7,11 +7,13 @@ var rename = require("gulp-rename");//Переименование файлов
 var autoprefixer = require("autoprefixer"); // Для webkit, transformation и т.д.
 var server = require("browser-sync");
 var del = require("del");
-
+var mqpacker = require("css-mqpacker");
+var imagemin = require("gulp-imagemin");
+ 
 gulp.task("default", ["run"])
 
 gulp.task("less", function() {   //Творим что-то с лесс файлами
-  gulp.src("src/less/style.less")
+return gulp.src("src/less/style.less")
   .pipe(plumber()) // обработка ошибок без остановки скрипта
   .pipe(less())
   .pipe(postcss([
@@ -21,25 +23,21 @@ gulp.task("less", function() {   //Творим что-то с лесс файл
       "last 2 Firefox versions",
       "last 2 Opera versions",
       "last 2 Edge versions"
-    ]})
+    ]}),
+    mqpacker({
+      sort:true
+    })
   ]))
   
-  .pipe(gulp.dest("src/css"))  
-  .pipe(gulp.dest("build/css"))
+  .pipe(gulp.dest("build/css"))  
   .pipe(minify())
   .pipe(rename("style.min.css"))
-  .pipe(gulp.dest("src/css"))  
   .pipe(gulp.dest("build/css"))
-
-
-  gulp.src("src/index.html")
-  .pipe(gulp.dest("build"))
-
 
   .pipe(server.reload({stream: true}));
 });
 
-gulp.task("run", ["less", "build"], function() {
+gulp.task("run", ["build"], function() {
   server.init({
     server: "build",
     ghostMode: false, //Отключает синхронный скролинг на разных устройствах
@@ -52,29 +50,17 @@ gulp.task("run", ["less", "build"], function() {
   
   gulp.watch("src/less/**/*.less", ["less"]);
   gulp.watch("src/js/**/*.js", ["build"]);
-  gulp.watch("src/*.html",["less"]) ;
+  gulp.watch("src/*.html",["build"]) ;
 
 
 });
 
-gulp.task("build",["clean"],function(){
+gulp.task("build", ["less"], function(){
          
         var build_html =
-          gulp.src("src/index.html")
+          gulp.src("src/**.html")
           .pipe(gulp.dest("build"))
 
-        var build_css =
-          gulp.src("src/css/style.css")
-          .pipe(gulp.dest("build/css"))//Отправка в папку готового проекта
-
-        var build_min_css = 
-          gulp.src("src/css/style.min.css")
-          .pipe(gulp.dest("build/css"))
-
-        var build_img =
-          gulp.src("src/img/**/*")
-          .pipe(gulp.dest("build/img"))
-        
         var build_js =                
           gulp.src("src/js/**/*.js")
           .pipe(gulp.dest("build/js"))
@@ -83,9 +69,22 @@ gulp.task("build",["clean"],function(){
           gulp.src("src/fonts/*")
           .pipe(gulp.dest("build/fonts"))
           
+        var build_img =  
+          gulp.src("src/img/**")
+          .pipe(gulp.dest("build/img"))
+          
         .pipe(server.reload({stream: true}));
-
 });
+
+gulp.task("images",function(){
+  return gulp.src("build/img/**/*.{png,jpg,gif}")
+          .pipe(imagemin([
+            imagemin.optipng({optimizationLevel:3}),
+            imagemin.jpegtran({progressive: true}) // Прогрессивная закрузка ( не с вверху в низ =))  
+          ]))
+
+          .pipe(gulp.dest("build/img"));
+})
 
 gulp.task("clean", function() {
   return del("build");
